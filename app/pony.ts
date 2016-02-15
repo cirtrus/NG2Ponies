@@ -11,7 +11,7 @@ export class Pony
               public loc:Array<number>,
               public realEstates:Array<any>
 
-            )
+            ) 
   {
 
   }
