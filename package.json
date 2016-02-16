@@ -6,8 +6,11 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
-    "typings" : "typings"
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"npm run watch-css\" ",
+    "typings": "typings",
+    "build-css": "node-sass scss/main.scss css/main.css",
+    "watch-css": "node-sass scss/main.scss css/main.css -w"
+
   },
   "license": "ISC",
   "dependencies": {
@@ -22,7 +25,9 @@
   "devDependencies": {
     "concurrently": "^1.0.0",
     "lite-server": "^2.0.1",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
     "typescript": "^1.7.5",
-    "typings":"^0.6.8"
+    "typings": "^0.6.8"
   }
 }
