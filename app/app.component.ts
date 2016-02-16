@@ -1,8 +1,10 @@
 import {Component} from 'angular2/core';
 import {Pony} from "./pony";
+import {PonyDetail} from "./pony-detail.component";
 @Component({
     selector: 'my-app',
-    template: '<h1>My First {{pony.firstname}} {{pony.lastname}} 2 App</h1>'
+    directives:[PonyDetail],
+    template: `<pony-detail [pony]="pony"></pony-detail>`
 })
 export class AppComponent {
     pony:Pony=new Pony("Alex","Fitzgerald",767397600000,0,1.25,
