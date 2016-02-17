@@ -1,9 +1,17 @@
 @import "pony-detail";
-.test{
+$col-count:12;
 
-  background: #0ff;
-}
-body
+*
 {
-  background: #00a;
+  box-sizing: border-box;
+}
+
+@for $i from 1 to  $col-count
+{
+
+  .col-#{$i}
+    {
+      width: 100%/$col-count*$i;
+      float: left;
+    }
 }

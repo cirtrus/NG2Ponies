@@ -9,7 +9,7 @@
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"npm run watch-css\" ",
     "typings": "typings",
     "build-css": "node-sass scss/main.scss css/main.css",
-    "watch-css": "node-sass scss/main.scss css/main.css -w"
+    "watch-css": "nodemon -e scss -x \"npm run build-css\" "
 
   },
   "license": "ISC",

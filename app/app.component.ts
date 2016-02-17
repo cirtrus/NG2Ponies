@@ -10,7 +10,7 @@ import {PonyService} from "./pony.service";
   HTTP_PROVIDERS,
   PonyService
 ],
-    template: `<pony-detail [pony]="pony" *ngFor="#pony of ponies"></pony-detail>`
+    template: `<pony-detail [pony]="pony" *ngFor="#pony of ponies" class="col-3"></pony-detail>`
 })
 export class AppComponent implements OnInit{
   public ponies:Pony[]=[];
