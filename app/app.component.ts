@@ -1,37 +1,30 @@
-import {Component,OnInit} from 'angular2/core';
+import {Component,OnInit,Input} from 'angular2/core';
 import {HTTP_PROVIDERS}    from 'angular2/http';
 import {Pony} from "./pony";
 import {PonyDetail} from "./pony-detail.component";
 import {PonyService} from "./pony.service";
+import {SearchPipe} from "./search.pipe"
+import {PonyListComponent} from "./pony-list.component";
+import {SearchBoxComponent} from "./search-box.component";
 @Component({
     selector: 'my-app',
-    directives:[PonyDetail],
+    directives:[PonyListComponent,SearchBoxComponent],
     providers: [
   HTTP_PROVIDERS,
   PonyService
 ],
-    template: `<pony-detail [pony]="pony" *ngFor="#pony of ponies" class="col-3"></pony-detail>`
+
+pipes:[SearchPipe],
+    template: `
+    <search-box (update)="term=$event"></search-box>
+    <pony-list [term]="term" class="col-6"></pony-list>`
 })
-export class AppComponent implements OnInit{
-  public ponies:Pony[]=[];
-  public errorMessage;
-  constructor(private _PonyService:PonyService)
+export class AppComponent {
+
+
+  constructor()
   {
 
   }
-  getPonies()
-  {
-   this._PonyService.getPonies()
-   .subscribe(
-                  ponies=> {console.log(ponies);this.ponies = ponies},
-                  error =>  this.errorMessage = <any>error);
-                    console.log(this.ponies);
-  }
-
-    ngOnInit()
-    {
-      this.getPonies();
-      console.log(this.ponies);
-    }
 
 }

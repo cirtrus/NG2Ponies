@@ -1,4 +1,5 @@
 @import "pony-detail";
+@import "pony-list-item";
 $col-count:12;
 
 *
@@ -6,12 +7,18 @@ $col-count:12;
   box-sizing: border-box;
 }
 
-@for $i from 1 to  $col-count
+@for $i from 1 to  $col-count+1
 {
 
   .col-#{$i}
     {
       width: 100%/$col-count*$i;
       float: left;
+      padding: 10px
     }
+}
+
+.color
+{
+  height: 16.6667%;
 }

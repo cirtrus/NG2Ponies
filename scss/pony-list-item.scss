@@ -1,0 +1,20 @@
+pony-list-item
+{
+  display: flex;
+  h2
+  {
+    vertical-align: middle;
+    display: inline;
+  }
+  .color {
+    height: 10vh;
+    width:  10vh;
+    padding: 0px;
+  }
+  .img
+  {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+}
