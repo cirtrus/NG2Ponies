@@ -1,15 +1,18 @@
 pony-list-item
 {
   display: flex;
+  align-items: center;
   h2
   {
-    vertical-align: middle;
+  
     display: inline;
   }
   .color {
-    height: 10vh;
+
     width:  10vh;
     padding: 0px;
+    min-width: 50px;
+    min-height: 50px;
   }
   .img
   {
