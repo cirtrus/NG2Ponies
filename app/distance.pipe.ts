@@ -17,6 +17,6 @@ export class DistancePipe implements PipeTransform {
       var w=Math.atan(Math.sqrt(S/C));
       var D=2*w*r;
 
-      return D.toFixed(2); 
+      return D.toFixed(2)+ " km"; 
   }
 }

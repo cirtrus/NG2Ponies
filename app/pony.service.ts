@@ -17,6 +17,16 @@ export class PonyService
                     .map(res =><Pony[]>res.json())
                     .catch(this.handleError);
   }
+
+  getPony(id)
+  {
+      console.log("HÜHÜ");
+    return this.http.get(this.ponyUrl).
+                    map(res =>res.json()[id])
+                    .catch(this.handleError);
+
+}
+
   handleError(error:Response)
   {
     console.log(404);
