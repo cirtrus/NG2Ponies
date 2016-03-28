@@ -1,5 +1,6 @@
 @import "pony-detail";
 @import "pony-list-item";
+@import "accordion";
 $col-count:12;
 
 *
@@ -21,4 +22,11 @@ $col-count:12;
 .color
 {
   height: 16.6667%;
+}
+leaflet-map
+{
+  &>div
+  {
+    height: 100%;
+  }
 }

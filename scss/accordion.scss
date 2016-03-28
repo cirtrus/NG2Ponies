@@ -1,0 +1,20 @@
+cir-accordion
+{
+  width: 33.33%;
+  &>div
+  {
+    border:solid #222 1px;
+  }
+
+  h2{
+    background:#aaa;
+    border:solid #222 1px;
+    margin: 0px;
+  }
+}
+
+cir-accordion-group
+{
+  display: flex;
+  flex-direction: column;
+}
